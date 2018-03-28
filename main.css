@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+
+body{
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Satisfy', cursive;
+	font-size: 3rem;
+	font-weight: 300;
+	height: 100vh;
+	width:100vw;
+}
+.card{
+	width:100%;
+	position: relative;
+	box-shadow: 0 0 25px 0 rgba(0,0,0,.35);
+}
+.card::before,.card::after{
+   content: '';
+   position: absolute;
+   border: 1px solid white;
+}
+.card::before{
+	top:2rem;
+	bottom: 1.3rem;
+	right: 2rem;
+}
+.card::after{
+	bottom: 2rem;
+	left: 2rem;
+	right: 1.3rem;
+}
+.card_image{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	z-index: -1;
+}
+.card_body{
+	background: rgba(0,0,0,.2);
+	color: white;
+	padding: 3rem;
+}
+.card_title,.card_text{
+  margin: 0;
+}
+.card_title{
+	font-size: 3rem;
+	line-height: 1;
+	margin:2rem;
+	position: relative;
+	z-index: 1;
+	color: black;
+}
+.card_title::before{
+	content: '';
+	position: absolute;
+	left:-7rem;
+	top:-0.1em;
+	bottom: -0.1em;
+	z-index: -1;
+	background: yellow;
+    width:calc(100% + 8rem);
+    box-shadow: inset -15px 0 10px -10px rgba(0,0,0,.8);
+}
+.card_title::after{
+	content: '';
+	position: absolute;
+	top:-.1em;
+	bottom: -.15em;
+	left:calc(100% + 5rem);
+	width:3rem;
+	background: yellow;
+	box-shadow: inset 15px 0 10px  -10px rgba(0,0,0,.8)
+}
+.card_text{
+	font-size:1rem;
+	text-align: right;
+}
